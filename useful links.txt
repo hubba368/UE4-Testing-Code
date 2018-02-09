@@ -1,0 +1,6 @@
+useful links:
+
+https://forums.unrealengine.com/community/community-content-tools-and-tutorials/91597-how-i-mix-umg-and-c
+https://forums.unrealengine.com/community/community-content-tools-and-tutorials/23466-tutorial-snippet-creating-a-umg-widget-in-c-and-delegate-example
+https://wiki.unrealengine.com/Slate,_Tree_View_Widget,_Ex:_In-Editor_File_Structure_Explorer
+https://answers.unrealengine.com/questions/135553/expose-c-variables-to-blueprint-umg.html
