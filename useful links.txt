@@ -1,0 +1,10 @@
+useful links:
+
+https://forums.unrealengine.com/community/community-content-tools-and-tutorials/91597-how-i-mix-umg-and-c
+https://forums.unrealengine.com/community/community-content-tools-and-tutorials/23466-tutorial-snippet-creating-a-umg-widget-in-c-and-delegate-example
+https://wiki.unrealengine.com/Slate,_Tree_View_Widget,_Ex:_In-Editor_File_Structure_Explorer
+https://answers.unrealengine.com/questions/135553/expose-c-variables-to-blueprint-umg.html
+http://students.ceid.upatras.gr/~vpapadatos/UE4cpp_slate_1.html
+https://wiki.unrealengine.com/HUD,_Canvas,_Code_Sample_of_800%2B_Lines,_Create_Buttons_%26_Draw_Materials
+https://www.youtube.com/watch?v=Snz99qBh9qQ
+http://orfeasel.com/using-unreal-motion-graphics-umg-with-c/
