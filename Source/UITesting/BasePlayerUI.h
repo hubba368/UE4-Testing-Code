@@ -3,23 +3,24 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/PlayerController.h"
-#include "UITesting_PlayerController.generated.h"
+#include "Blueprint/UserWidget.h"
+#include "BasePlayerUI.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class UITESTING_API AUITesting_PlayerController : public APlayerController
+class UITESTING_API UBasePlayerUI : public UUserWidget
 {
 	GENERATED_BODY()
 	
 public:
-	virtual void BeginPlay() override;
+	UFUNCTION(BlueprintCallable, Category = "UI")
+		void AddItemToUI();
 
 protected:
 
+
 private:
-	
 	
 };
