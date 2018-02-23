@@ -9,10 +9,11 @@ void UPlayerHUDWidget::UpdateHealth(float value)
 
 float UPlayerHUDWidget::GetInitialHealth()
 {
-	return InitialHealth;
+	//if()
+	return 0.0f;
 }
 
 float UPlayerHUDWidget::GetCurrentHealth()
 {
-	return CurrentHealth;
+	return 0.0f;
 }

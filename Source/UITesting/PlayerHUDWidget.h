@@ -29,9 +29,5 @@ protected:
 
 private:
 	
-	UPROPERTY(EditAnywhere, Category = "Player UI")
-	float CurrentHealth;
 
-	UPROPERTY(EditAnywhere, Category = "Player UI")
-	float InitialHealth;
 };
