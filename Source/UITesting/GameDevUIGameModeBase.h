@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
+#include "PlayerHUDWidget.h"
 #include "GameDevUIGameModeBase.generated.h"
 
 /**
@@ -15,22 +16,19 @@ class UITESTING_API AGameDevUIGameModeBase : public AGameModeBase
 	GENERATED_BODY()
 	
 public:
-	void AddItemToUI(FText ItemName);
+
 
 protected:
 	// Called when game starts
 	virtual void BeginPlay() override;
 
-	UFUNCTION(BlueprintCallable, Category = "Player UI")
-	void AddItemToUI();
-
 	// Widget class to use as the player HUD
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Player UI")
-	TSubclassOf<UUserWidget> PlayerHUDWidgetClass;
+	TSubclassOf<UPlayerHUDWidget> PlayerHUDWidgetClass;
 
 	// the actual instance of the player HUD to be used.
 	UPROPERTY()
-	UUserWidget *HUDWidget;
+	UPlayerHUDWidget *HUDWidget;
 
 private:
 	

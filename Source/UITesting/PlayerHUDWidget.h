@@ -16,9 +16,12 @@ class UITESTING_API UPlayerHUDWidget : public UUserWidget
 	
 public:
 
+	void SetHealth(float healthValue);
 
 protected:
 
+	UFUNCTION(BlueprintCallable, Category = "Player UI")
+	void SetHealth();
 
 
 
