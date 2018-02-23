@@ -2,4 +2,17 @@
 
 #include "PlayerHUDWidget.h"
 
+void UPlayerHUDWidget::UpdateHealth(float value)
+{
+	//
+}
 
+float UPlayerHUDWidget::GetInitialHealth()
+{
+	return InitialHealth;
+}
+
+float UPlayerHUDWidget::GetCurrentHealth()
+{
+	return CurrentHealth;
+}

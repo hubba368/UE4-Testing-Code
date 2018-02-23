@@ -16,6 +16,15 @@ void AMyCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	if (PlayerHUDWidgetClass) 
+	{
+		HUDWidget = CreateWidget<UPlayerHUDWidget>(GetWorld(), PlayerHUDWidgetClass);
+	
+		if (HUDWidget) 
+		{
+			HUDWidget->AddToViewport();
+		}
+	}
 }
 
 // Called every frame
@@ -23,6 +32,7 @@ void AMyCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	UpdateHealth();
 }
 
 // Called to bind functionality to input
@@ -30,5 +40,10 @@ void AMyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+}
+
+void AMyCharacter::UpdateHealth()
+{
+	//AMyCharacter player = Cast<AMyCharacter>(GetPawn())
 }
 

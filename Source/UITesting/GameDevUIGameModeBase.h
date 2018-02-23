@@ -22,13 +22,6 @@ protected:
 	// Called when game starts
 	virtual void BeginPlay() override;
 
-	// Widget class to use as the player HUD
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Player UI")
-	TSubclassOf<UPlayerHUDWidget> PlayerHUDWidgetClass;
-
-	// the actual instance of the player HUD to be used.
-	UPROPERTY()
-	UPlayerHUDWidget *HUDWidget;
 
 private:
 	
