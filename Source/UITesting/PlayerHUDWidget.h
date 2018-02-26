@@ -16,14 +16,15 @@ class UITESTING_API UPlayerHUDWidget : public UUserWidget
 	
 public:
 
-	UFUNCTION(BlueprintCallable, Category = "Player UI")
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Player UI")
 	void UpdateHealth(float healthValue);
+	
+	UPROPERTY(EditAnywhere, Category = "Player UI")
+		float CurrentHealth;
 
-	UFUNCTION(BlueprintPure, BlueprintCallable, Category = "Player UI")
-	float GetInitialHealth();
+	//UPROPERTY(EditAnywhere, Category = "Player UI")
+		//float Health;
 
-	UFUNCTION(BlueprintPure, BlueprintCallable, Category = "Player UI")
-	float GetCurrentHealth();
 
 protected:
 

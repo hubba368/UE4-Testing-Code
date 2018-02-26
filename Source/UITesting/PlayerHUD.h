@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/HUD.h"
 #include "PlayerHUDWidget.h"
+#include "MyCharacter.h"
 #include "PlayerHUD.generated.h"
 
 /**
@@ -23,11 +24,15 @@ protected:
 
 	// Widget class to use as the player HUD template
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Player UI")
-		TSubclassOf<UPlayerHUDWidget> PlayerHUDWidgetClass;
+	TSubclassOf<UPlayerHUDWidget> PlayerHUDWidgetClass;
 
 	// the actual instance of the player HUD to be used.
 	UPROPERTY()
-		UPlayerHUDWidget *HUDWidget;
+	UPlayerHUDWidget *HUDWidget;
+
+	UPROPERTY(EditAnywhere, Category = "Player UI")
+	AMyCharacter *playerChar;
+
 
 private:
 	

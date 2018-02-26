@@ -7,18 +7,26 @@ void APlayerHUD::BeginPlay()
 {
 	Super::BeginPlay();
 
-	if (PlayerHUDWidgetClass)
-	{
-		HUDWidget = CreateWidget<UPlayerHUDWidget>(GetWorld(), PlayerHUDWidgetClass);
+	playerChar = Cast<AMyCharacter>(GetParentActor());
 
-		if (HUDWidget)
+	if (playerChar) 
+	{
+		// if hud widget is not null, create it and add it to the viewport
+		if (PlayerHUDWidgetClass)
 		{
-			HUDWidget->AddToViewport();
+			HUDWidget = CreateWidget<UPlayerHUDWidget>(GetWorld(), PlayerHUDWidgetClass);
+
+			if (HUDWidget)
+			{
+				HUDWidget->AddToViewport();
+			}
+		}
+		else
+		{
+			UE_LOG(LogTemp, Warning, TEXT("UI ERROR"));
 		}
 	}
-	else 
-	{
-		UE_LOG(LogTemp, Warning, TEXT("UI ERROR"));
-	}
+
+	
 }
 

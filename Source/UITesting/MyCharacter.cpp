@@ -15,6 +15,8 @@ AMyCharacter::AMyCharacter()
 void AMyCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+
+
 }
 
 // Called every frame
@@ -22,7 +24,6 @@ void AMyCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	UpdateHealth();
 }
 
 // Called to bind functionality to input
@@ -32,7 +33,18 @@ void AMyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 
 }
 
-void AMyCharacter::UpdateHealth()
+
+void AMyCharacter::UpdateHealth(float value)
 {
-	//AMyCharacter player = Cast<AMyCharacter>(GetPawn())
+	playerHUD->UpdateHealth(value);
+}
+
+float AMyCharacter::GetInitialHealth()
+{
+	return InitialHealth;
+}
+
+float AMyCharacter::GetCurrentHealth()
+{
+	return CurrentHealth;
 }

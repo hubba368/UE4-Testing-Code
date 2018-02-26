@@ -29,13 +29,23 @@ protected:
 
 
 public:	
+
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	void UpdateHealth();
+	UPROPERTY(EditAnywhere, Category = "Player UI")
+	UPlayerHUDWidget *playerHUD;
+
+	void UpdateHealth(float value);
+
+	UFUNCTION(BlueprintPure, BlueprintCallable, Category = "Player UI")
+	float GetInitialHealth();
+
+	UFUNCTION(BlueprintPure, BlueprintCallable, Category = "Player UI")
+	float GetCurrentHealth();
 	
 };
 

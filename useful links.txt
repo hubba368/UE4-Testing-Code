@@ -11,3 +11,9 @@ http://orfeasel.com/using-unreal-motion-graphics-umg-with-c/
 https://www.youtube.com/watch?v=jbM4VU8oPYI
 http://benhumphreys.co.uk/unreal/ui-cpp-uuserwidget/
 https://forums.unrealengine.com/development-discussion/c-gameplay-programming/43475-c-with-umg-hud
+
+
+
+1. UI Class which has c++/blueprint functions to update ui components
+2. call the UI functions in player character
+3. Could use PlayerHUD class as bridge between the 2 classes
