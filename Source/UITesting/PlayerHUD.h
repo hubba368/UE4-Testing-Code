@@ -6,6 +6,8 @@
 #include "GameFramework/HUD.h"
 #include "PlayerHUDWidget.h"
 #include "MyCharacter.h"
+#include "EngineUtils.h"
+#include "Kismet/GameplayStatics.h"
 #include "PlayerHUD.generated.h"
 
 /**
@@ -17,7 +19,7 @@ class UITESTING_API APlayerHUD : public AHUD
 	GENERATED_BODY()
 	
 public:
-
+	UPlayerHUDWidget *GetHUDWidget();
 
 protected:
 	virtual void BeginPlay() override;
@@ -31,7 +33,7 @@ protected:
 	UPlayerHUDWidget *HUDWidget;
 
 	UPROPERTY(EditAnywhere, Category = "Player UI")
-	AMyCharacter *playerChar;
+	class AMyCharacter *playerChar;
 
 
 private:

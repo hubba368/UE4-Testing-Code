@@ -5,6 +5,8 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "PlayerHUDWidget.h"
+#include "PlayerHUD.h"
+#include "EngineUtils.h"
 #include "MyCharacter.generated.h"
 
 UCLASS()
@@ -26,7 +28,7 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-
+	void UpdateCurrentHealth(float value);
 
 public:	
 
@@ -37,9 +39,8 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	UPROPERTY(EditAnywhere, Category = "Player UI")
-	UPlayerHUDWidget *playerHUD;
+	class APlayerHUD *playerHUD;
 
-	void UpdateHealth(float value);
 
 	UFUNCTION(BlueprintPure, BlueprintCallable, Category = "Player UI")
 	float GetInitialHealth();

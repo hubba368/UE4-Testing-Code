@@ -7,9 +7,10 @@ void APlayerHUD::BeginPlay()
 {
 	Super::BeginPlay();
 
-	playerChar = Cast<AMyCharacter>(GetParentActor());
+	// this only works for singleplayer - would need changing if multiplayer was implemented.
+	APlayerController *test = UGameplayStatics::GetPlayerController(GetWorld(), 0);
 
-	if (playerChar) 
+	if (test) 
 	{
 		// if hud widget is not null, create it and add it to the viewport
 		if (PlayerHUDWidgetClass)
@@ -26,7 +27,14 @@ void APlayerHUD::BeginPlay()
 			UE_LOG(LogTemp, Warning, TEXT("UI ERROR"));
 		}
 	}
+	else 
+	{
+		UE_LOG(LogTemp, Warning, TEXT("PLAYER CHAR IS NULL ERROR"));
+	}
+}
 
-	
+UPlayerHUDWidget *APlayerHUD::GetHUDWidget() 
+{
+	return HUDWidget;
 }
 

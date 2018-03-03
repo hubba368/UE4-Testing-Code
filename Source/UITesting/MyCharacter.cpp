@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "MyCharacter.h"
-
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 AMyCharacter::AMyCharacter()
@@ -16,7 +16,7 @@ void AMyCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
-
+	playerHUD = Cast<APlayerHUD>(UGameplayStatics::GetPlayerController(GetWorld(), 0)->GetHUD());
 }
 
 // Called every frame
@@ -34,9 +34,9 @@ void AMyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 }
 
 
-void AMyCharacter::UpdateHealth(float value)
+void AMyCharacter::UpdateCurrentHealth(float value)
 {
-	playerHUD->UpdateHealth(value);
+	playerHUD->GetHUDWidget()->UpdateHealth(value);
 }
 
 float AMyCharacter::GetInitialHealth()
