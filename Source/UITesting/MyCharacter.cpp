@@ -17,6 +17,8 @@ void AMyCharacter::BeginPlay()
 	Super::BeginPlay();
 
 	playerHUD = Cast<APlayerHUD>(UGameplayStatics::GetPlayerController(GetWorld(), 0)->GetHUD());
+	CurrentHealth = 100.0f;
+	UpdateCurrentHealth(CurrentHealth);
 }
 
 // Called every frame
@@ -36,7 +38,9 @@ void AMyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 
 void AMyCharacter::UpdateCurrentHealth(float value)
 {
-	playerHUD->GetHUDWidget()->UpdateHealth(value);
+	// should change this to stop circular dependency.
+	//value = value + -GetWorld()->GetDeltaSeconds() * 0.01f;
+	playerHUD->UpdatePlayerHealth(value);
 }
 
 float AMyCharacter::GetInitialHealth()

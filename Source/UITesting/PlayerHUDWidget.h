@@ -18,7 +18,7 @@ public:
 
 	void UpdateHealth(float healthValue);
 	
-	UPROPERTY(EditAnywhere, Category = "Player UI")
+	UPROPERTY(BlueprintReadOnly, Category = "Player UI")
 	float CurrentHealth;
 
 	//UPROPERTY(EditAnywhere, Category = "Player UI")

@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-#include "PlayerHUDWidget.h"
 #include "PlayerHUD.h"
 #include "EngineUtils.h"
 #include "MyCharacter.generated.h"

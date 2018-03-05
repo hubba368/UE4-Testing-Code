@@ -38,3 +38,9 @@ UPlayerHUDWidget *APlayerHUD::GetHUDWidget()
 	return HUDWidget;
 }
 
+void APlayerHUD::UpdatePlayerHealth(float value)
+{
+
+	HUDWidget->UpdateHealth(value);
+}
+

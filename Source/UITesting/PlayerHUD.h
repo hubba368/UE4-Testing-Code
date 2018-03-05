@@ -21,6 +21,8 @@ class UITESTING_API APlayerHUD : public AHUD
 public:
 	UPlayerHUDWidget *GetHUDWidget();
 
+	void UpdatePlayerHealth(float value);
+
 protected:
 	virtual void BeginPlay() override;
 

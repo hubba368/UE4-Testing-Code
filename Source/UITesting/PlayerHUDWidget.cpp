@@ -4,6 +4,7 @@
 
 void UPlayerHUDWidget::UpdateHealth(float value)
 {
-	CurrentHealth += value;
+	CurrentHealth = value;
+	UpdateHealth();
 }
 
