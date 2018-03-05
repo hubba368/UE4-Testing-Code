@@ -26,6 +26,8 @@ public:
 protected:
 	virtual void BeginPlay() override;
 
+	void InitialiseHUDValues();
+
 	// Widget class to use as the player HUD template
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Player UI")
 	TSubclassOf<UPlayerHUDWidget> PlayerHUDWidgetClass;

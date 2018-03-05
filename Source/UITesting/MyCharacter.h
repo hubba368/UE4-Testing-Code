@@ -21,7 +21,10 @@ private:
 	float CurrentHealth;
 
 	UPROPERTY(EditAnywhere, Category = "Player UI")
-	float InitialHealth;
+	float MaximumHealth;
+
+	//need this to check for key presses
+	APlayerController *testing;
 
 protected:
 	// Called when the game starts or when spawned
@@ -42,7 +45,7 @@ public:
 
 
 	UFUNCTION(BlueprintPure, BlueprintCallable, Category = "Player UI")
-	float GetInitialHealth();
+	float GetMaximumHealth();
 
 	UFUNCTION(BlueprintPure, BlueprintCallable, Category = "Player UI")
 	float GetCurrentHealth();

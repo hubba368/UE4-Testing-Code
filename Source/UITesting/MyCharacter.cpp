@@ -17,8 +17,10 @@ void AMyCharacter::BeginPlay()
 	Super::BeginPlay();
 
 	playerHUD = Cast<APlayerHUD>(UGameplayStatics::GetPlayerController(GetWorld(), 0)->GetHUD());
-	CurrentHealth = 100.0f;
-	UpdateCurrentHealth(CurrentHealth);
+
+	testing = (UGameplayStatics::GetPlayerController(GetWorld(), 0));
+	//CurrentHealth = 1.0f;
+	//UpdateCurrentHealth(CurrentHealth);
 }
 
 // Called every frame
@@ -26,6 +28,26 @@ void AMyCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	if (testing->WasInputKeyJustPressed(EKeys::F)) 
+	{
+		CurrentHealth = 100.0f;
+		UpdateCurrentHealth(CurrentHealth);
+	}
+	if (testing->WasInputKeyJustPressed(EKeys::G))
+	{
+		CurrentHealth = 50.0f;
+		UpdateCurrentHealth(CurrentHealth);
+	}
+	if (testing->WasInputKeyJustPressed(EKeys::H))
+	{
+		CurrentHealth = 25.0f;
+		UpdateCurrentHealth(CurrentHealth);
+	}
+	if (testing->WasInputKeyJustPressed(EKeys::J))
+	{
+		CurrentHealth = 0.0f;
+		UpdateCurrentHealth(CurrentHealth);
+	}
 }
 
 // Called to bind functionality to input
@@ -43,9 +65,9 @@ void AMyCharacter::UpdateCurrentHealth(float value)
 	playerHUD->UpdatePlayerHealth(value);
 }
 
-float AMyCharacter::GetInitialHealth()
+float AMyCharacter::GetMaximumHealth()
 {
-	return InitialHealth;
+	return MaximumHealth;
 }
 
 float AMyCharacter::GetCurrentHealth()

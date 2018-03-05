@@ -20,6 +20,7 @@ void APlayerHUD::BeginPlay()
 			if (HUDWidget)
 			{
 				HUDWidget->AddToViewport();
+				InitialiseHUDValues();
 			}
 		}
 		else
@@ -31,6 +32,11 @@ void APlayerHUD::BeginPlay()
 	{
 		UE_LOG(LogTemp, Warning, TEXT("PLAYER CHAR IS NULL ERROR"));
 	}
+}
+
+void APlayerHUD::InitialiseHUDValues() 
+{
+	HUDWidget->InitialisePlayerHUD();
 }
 
 UPlayerHUDWidget *APlayerHUD::GetHUDWidget() 

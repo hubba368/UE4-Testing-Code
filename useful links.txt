@@ -1,5 +1,6 @@
 useful links:
 
+Player HUD and UI
 https://forums.unrealengine.com/community/community-content-tools-and-tutorials/91597-how-i-mix-umg-and-c
 https://forums.unrealengine.com/community/community-content-tools-and-tutorials/23466-tutorial-snippet-creating-a-umg-widget-in-c-and-delegate-example
 https://wiki.unrealengine.com/Slate,_Tree_View_Widget,_Ex:_In-Editor_File_Structure_Explorer
@@ -13,6 +14,13 @@ http://benhumphreys.co.uk/unreal/ui-cpp-uuserwidget/
 https://forums.unrealengine.com/development-discussion/c-gameplay-programming/43475-c-with-umg-hud
 https://forums.unrealengine.com/development-discussion/blueprint-visual-scripting/115613-get-player-character-to-bind-hud-progress-bars-with-character-variables
 
+Progress Bar Smoothing
+https://www.reddit.com/r/unrealengine/comments/4b9tgd/smoother_progress_bar/
+https://answers.unrealengine.com/questions/460393/how-to-create-progressbar-percent-animation.html
+https://answers.unrealengine.com/questions/279010/umg-progressbar-question.html
+
+Main Menu
+https://answers.unrealengine.com/questions/82054/making-the-main-menu-of-the-game.html
 
 1. UI Class which has c++/blueprint functions to update ui components
 2. call the UI functions in player character
