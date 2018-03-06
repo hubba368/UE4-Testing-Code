@@ -33,7 +33,7 @@ void AMyCharacter::Tick(float DeltaTime)
 	}
 	if (testing->WasInputKeyJustPressed(EKeys::G))
 	{
-		CurrentHealth = 50.0f;
+		CurrentHealth = -50.0f;
 		UpdateCurrentHealth(CurrentHealth);
 	}
 	if (testing->WasInputKeyJustPressed(EKeys::H))
