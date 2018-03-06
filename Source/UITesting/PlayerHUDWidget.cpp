@@ -10,7 +10,9 @@ void UPlayerHUDWidget::UpdateHealth(float value)
 
 void UPlayerHUDWidget::InitialisePlayerHUD()
 {
-	MaxHealth = 100.0f;
+	MaxHealth = 0.0f;
 	CurrentHealth = MaxHealth;
+	DisplayHealth = MaxHealth;
 	InitialiseHUD();
 }
+

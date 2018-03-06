@@ -19,8 +19,6 @@ void AMyCharacter::BeginPlay()
 	playerHUD = Cast<APlayerHUD>(UGameplayStatics::GetPlayerController(GetWorld(), 0)->GetHUD());
 
 	testing = (UGameplayStatics::GetPlayerController(GetWorld(), 0));
-	//CurrentHealth = 1.0f;
-	//UpdateCurrentHealth(CurrentHealth);
 }
 
 // Called every frame

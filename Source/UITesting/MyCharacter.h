@@ -40,9 +40,9 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	// reference to the HUD Class, needed to update UI elements
 	UPROPERTY(EditAnywhere, Category = "Player UI")
 	class APlayerHUD *playerHUD;
-
 
 	UFUNCTION(BlueprintPure, BlueprintCallable, Category = "Player UI")
 	float GetMaximumHealth();
