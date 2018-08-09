@@ -1,2 +1,3 @@
-# UE4-Testing-Code
-Just a repository for code that i used during my time learning UE4.
+# UE4-Vitriolic-My-Code
+
+This is a repo for the features I developed during the Game Development module at the University of Derby. 
